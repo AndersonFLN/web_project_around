@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Anderson Costa" />
+    <meta name="keywords" content="Around" />
+
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./pages/index.css" />
+
+    <title>Around the USA</title>
+  </head>
+  <body>
+    <div class="page">
+
+      <div class="popup popup_form-edit-profile">
+        <div class="popup__container">
+          <dialog class="dialog">
+            <h2 class="popup__title">Editar Perfil</h2>
+            <form class="popup__form">
+              <input
+                type="text"
+                class="input input_popup-name"
+                id="input_popup-name"
+                placeholder="Nome"
+                name="name"
+              />
+              <input
+                type="text"
+                class="input input_popup-job"
+                id="input_popup-job"
+                placeholder="Sobre mim"
+                name="job"
+              />
+              <button type="submit" class="button button_popup-submit">
+                Salvar
+              </button>
+            </form>
+            <button class="button button_close" id="fechar"> </button>
+          </dialog>
+        </div>
+      </div>
+
+
+
+
+      <header class="header">
+        <img src="./images/Vector.png" alt="Around" class="header__logo"/>
+      </header>
+
+      <main class="content">
+
+        <section class="profile">
+          <div class="profile__left">
+            <img src="./images/fotoperfil.jpg" alt="foto perfil" class="profile__perfil"/>
+            <div>
+              <h1 class="profile__name">
+                <span id="profile__name">Jacques Cousteau</span>
+                <button type="button" class="profile__button" id="profile__button">
+                  <img src="./images/Buttonperfil.png" alt="buttonperfil icon">
+                </button>
+              </h1>
+              <h2 id="profile__description" class="profile__description">Explorador</h2>
+            </div>
+          </div>
+
+          <div class="gallery">
+            <button type="button" class="profile__add" id="profile__card">
+              <img src="./images/+.png" alt="+ icon">
+            </button>
+          </div>
+        </section>
+
+        <section class="elements">
+          <div class="card">
+            <img src="./images/valeyosemita.jpg" class="card__img" alt="cover">
+            <div class="card__label">
+              <strong class="block">Vale de Yosemite</strong>
+              <buttom type="button" class="button button_like">
+                <img  src="./images/coracao.svg" alt="like"/>
+              </buttom>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./images/lagolouise.png" class="card__img" alt="cover">
+            <div class="card__label">
+              <strong class="block">Lago Louise</strong>
+              <buttom type="button" class="button button_like"">
+                <img src="./images/coracao.svg" alt="+ icon"/>
+              </buttom>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./images/montanhacare.png" class="card__img" alt="cover">
+            <div class="card__label">
+              <strong class="block">Montanhas Carentos</strong>
+              <buttom type="button" class="button button_like">
+                <img src="./images/coracao.svg" alt="like"/>
+              </buttom>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./images/laten.png" class="card__img" alt="cover">
+            <div class="card__label">
+              <strong class="block">Latemar</strong>
+              <buttom type="button" class="button button_like">
+                <img src="./images/coracao.svg" alt="+ icon"/>
+              </buttom>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./images/parquenacional.png" class="card__img" alt="cover">
+            <div class="card__label">
+              <strong class="block">Parque Nacional da Vanoise</strong>
+              <buttom type="button" class="button button_like">
+                <img src="./images/coracao.svg" alt="+ icon"/>
+              </buttom>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./images/lagodebrais.png" class="card__img" alt="cover">
+            <div class="card__label">
+              <strong class="block">Lago di Braies</strong>
+              <buttom type="button" class="button button_like">
+                <img src="./images/coracao.svg" alt="+ icon"/>
+              </buttom>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&#169; © 2024 Around The U.S.</p>
+      </footer>
+      <script src="script.js"></script>
+
+    </div>
+  </body>
+</html>

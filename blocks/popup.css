@@ -1,0 +1,35 @@
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / .5);
+
+}
+
+dialog {
+  border: none;
+  width: 430px;
+  height: 330px;
+  border-radius: 10px;
+  overflow: visible;
+}
+
+.popup__title {
+  font-family: 'Inter';
+  font-weight: 900;
+  font-size: 24px;
+  color: #000;
+  margin: 30px 0 54px 36px;
+
+
+}
+
+.popup__form {
+  margin: 0 36px 0 36px;
+
+}
+
+@media screen and (max-width: 590px) {
+  .popup__title {
+    font-size: 18px;
+    margin-bottom: 76px;
+  }
+
+}

@@ -1,0 +1,90 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0;
+  transition: opacity linear 0.2s;
+  cursor: pointer;
+  line-height: 1.21;
+}
+
+.button:hover {
+  opacity: 60%;
+}
+
+.button_close {
+  background: url("../images/CloseIcon.svg") center no-repeat;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+}
+
+.button_popup-submit {
+  background-color: #000;
+  color: #fff;
+  border-radius: 2px;
+  width: 100%;
+  height: 50px;
+  margin: 48px 0 0 auto;
+}
+
+.button_popup-submit:hover {
+  opacity: 80%;
+}
+
+.button_like {
+  background-size: 21px 19px;
+  height: 19px;
+  width: 21px;
+  padding-top: 6px;
+  padding-right: 5px;
+}
+
+/* Espera
+.button_like_activate {
+
+}*/
+
+
+@media screen and (max-width: 590px) {
+  .button_edit {
+    background-size: 7.5px;
+    height: 18px;
+    width: 18px;
+  }
+
+  .button_close {
+    background-size: 26px;
+    height: 26px;
+    width: 26px;
+    right: 5px;
+    top: -45px;
+  }
+
+  .button_close-card-image {
+    background-size: 30px;
+    height: 30px;
+    width: 30px;
+    top: -30.21px;
+    right: -30.21px;
+  }
+
+  .button_popup-submit {
+    height: 46px;
+    font-size: 14px;
+    margin-top: 46px;
+  }
+
+  .button_add {
+    background-size: 16px;
+    margin: 36px auto 0;
+    width: 88.125vw;
+    max-width: 282px;
+  }
+}
+
+

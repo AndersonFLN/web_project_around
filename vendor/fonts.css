@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../vendor/fonts/Inter/static/Inter_18pt-ExtraBold.ttf')format('woff2');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../vendor/fonts/Inter/static/Inter_28pt-Regular.ttf') format('woff2');
+  font-weight: 400;
+}
