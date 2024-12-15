@@ -44,10 +44,17 @@
   padding-right: 5px;
 }
 
-/* Espera
-.button_like_activate {
+.trash{
+  position: relative;
+  right: -5px;
+  top: -290px;
+  cursor: pointer;
+}
 
-}*/
+.popup_photo-gallery {
+  width: 75vw;
+  height: 75vh;
+}
 
 
 @media screen and (max-width: 590px) {

@@ -42,6 +42,33 @@
         </div>
       </div>
 
+      <div class="popup popup_form-edit-gallery">
+        <div class="popup__container">
+          <dialog class="dialog_gallery">
+            <h2 class="popup__title">Novo local</h2>
+            <form class="popup__form-gallery">
+              <input
+                type="text"
+                class="input input_popup-title"
+                id="input_popup-title"
+                placeholder="Titulo"
+                name="title"
+              />
+              <input
+                type="text"
+                class="input input_popup-link"
+                id="input_popup-link"
+                placeholder="URL da imagem"
+                name="link"
+              />
+              <button type="submit" class="button button_popup-submit" >
+                Criar
+              </button>
+            </form>
+            <button class="button button_close" id="fecharGallery"> </button>
+          </dialog>
+        </div>
+      </div>
 
 
 
@@ -72,66 +99,9 @@
           </div>
         </section>
 
-        <section class="elements">
-          <div class="card">
-            <img src="./images/valeyosemita.jpg" class="card__img" alt="cover">
-            <div class="card__label">
-              <p class="block">Vale de Yosemite</p>
-              <div class="button button_like">
-                <img  src="./images/coracao.svg" alt="like"/>
-              </div>
-            </div>
-          </div>
+        <section class="elements" id="elements">
 
-          <div class="card">
-            <img src="./images/lagolouise.png" class="card__img" alt="cover">
-            <div class="card__label">
-              <p class="block">Lago Louise</p>
-              <div class="button button_like">
-                <img src="./images/coracao.svg" alt="+ icon"/>
-              </div>
-            </div>
-          </div>
 
-          <div class="card">
-            <img src="./images/montanhacare.png" class="card__img" alt="cover">
-            <div class="card__label">
-              <p class="block">Montanhas Carentos</p>
-              <div class="button button_like">
-                <img src="./images/coracao.svg" alt="like"/>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="./images/laten.png" class="card__img" alt="cover">
-            <div class="card__label">
-              <p class="block">Latemar</p>
-              <div class="button button_like">
-                <img src="./images/coracao.svg" alt="+ icon"/>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="./images/parquenacional.png" class="card__img" alt="cover">
-            <div class="card__label">
-              <p class="block">Parque Nacional da Vanoise</p>
-              <div class="button button_like">
-                <img src="./images/coracao.svg" alt="+ icon"/>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="./images/lagodebrais.png" class="card__img" alt="cover">
-            <div class="card__label">
-              <p class="block">Lago di Braies</p>
-              <div class="button button_like">
-                <img src="./images/coracao.svg" alt="+ icon"/>
-              </div>
-            </div>
-          </div>
         </section>
       </main>
 
@@ -139,6 +109,7 @@
         <p>&#169; © 2024 Around The U.S.</p>
       </footer>
       <script src="./scripts/index.js"></script>
+      <script src="./scripts/add-gallery.js"></script>
 
     </div>
   </body>

@@ -1,7 +1,7 @@
 const buttonEditar = document.querySelector("#profile__button");
 const buttonFecharModal = document.querySelector("#fechar");
 
-const modal = document.querySelector("dialog");
+const modal = document.querySelector(".dialog");
 
 buttonFecharModal.onclick = function() {
   modal.close();
