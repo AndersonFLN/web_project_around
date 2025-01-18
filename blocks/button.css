@@ -52,8 +52,19 @@
 }
 
 .popup_photo-gallery {
-  width: 75vw;
-  height: 75vh;
+  position: fixed;
+  height: 80vh;
+  z-index: 999;
+  top: 10vh;
+}
+
+dialog::backdrop {
+  background-color: #000000dd;
+}
+
+
+.img-detail {
+  color: white;
 }
 
 

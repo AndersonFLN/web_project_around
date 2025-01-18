@@ -31,6 +31,7 @@ const initialCards = [
   }
 ];
 
+
 buttonAdd.onclick = function(){
 
   modaladd.showModal();
@@ -44,7 +45,7 @@ buttonFecharModalAdd.onclick = function(){
 
 function renderCard(name, link){
   return `<div class="card">
-            <img src="${link}" class="card__img" alt="cover">
+            <img src="${link}" class="card__img" alt="cover" onclick="showImage('${link}', '${name}')">
             <div class="card__label">
               <p class="block">${name}</p>
               <div class="button button_like">
@@ -116,4 +117,24 @@ function updateLikeButton(){
 
     });
   }
+}
+
+
+
+
+
+const fecharGallery = document.getElementById("fecharGallery2");
+const popupGallery = document.querySelector(".popup__gallery");
+
+
+fecharGallery.onclick = function(){
+  popupGallery.close();
+}
+
+function showImage(src, text) {
+  popupGallery.showModal();
+
+  document.getElementById("popupImage").src = src;
+  document.getElementById("popupText").innerHTML = text;
+
 }
