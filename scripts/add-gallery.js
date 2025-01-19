@@ -31,7 +31,6 @@ const initialCards = [
   }
 ];
 
-
 buttonAdd.onclick = function(){
 
   modaladd.showModal();
@@ -43,17 +42,16 @@ buttonFecharModalAdd.onclick = function(){
 
 }
 
-function renderCard(name, link){
-  return `<div class="card">
-            <img src="${link}" class="card__img" alt="cover" onclick="showImage('${link}', '${name}')">
-            <div class="card__label">
-              <p class="block">${name}</p>
-              <div class="button button_like">
-                <img src="./images/trash-icon.svg" data-name="${name}" class="trash" alt="delete" title="apagar"/>
-                <img src="./images/coracao.svg" class="like" alt="like"/>
-              </div>
-            </div>
-          </div>`
+function renderCard(name, link) {
+  // Obtém o template do HTML
+  const template = document.getElementById("card-template").innerHTML;
+
+  // Substitui os placeholders pelas variáveis fornecidas
+  const cardHTML = template
+    .replaceAll("{{link}}", link)
+    .replaceAll("{{name}}", name);
+
+  return cardHTML;
 }
 
 function initializeCards(){
@@ -62,8 +60,6 @@ function initializeCards(){
     const galtml = renderCard(item.name, item.link, pos++);
     galleryContainer.insertAdjacentHTML('afterbegin', galtml);
   }
-  updateDeleteButton();
-  updateLikeButton();
 }
 
 initializeCards();
@@ -85,43 +81,22 @@ criarGallery.addEventListener('submit', (evt) => {
   modaladd.close();
 });
 
-function updateDeleteButton(){
-  const deleteElement = document.querySelectorAll(".trash");
 
-  for( const trash of deleteElement ) {
-    trash.onclick = null;
-    trash.addEventListener('click', function() {
-      // Remove o card pai
-      const cardToRemove = trash.closest('.card');
-      cardToRemove.remove();
-      const name = this.getAttribute('data-name');
+function onDeleteCard(trash, name) {
+  const cardToRemove = trash.closest('.card');
+  cardToRemove.remove();
 
-      const index = initialCards.findIndex(item => item.name === name);
-      initialCards.splice(index, 1);
-
-    });
-  }
+  const index = initialCards.findIndex(item => item.name === name);
+  initialCards.splice(index, 1);
 }
 
-function updateLikeButton(){
-  const likeElement = document.querySelectorAll(".like");
-
-  for( const like of likeElement ) {
-    like.onclick = null;
-    like.addEventListener('click', function() {
-      if( like.src.indexOf("active") >= 0 ) {
-        like.src = './images/coracao.svg';
-      } else {
-        like.src = './images/like_icon_active.svg';
-      }
-
-    });
+function onLikeCard(like){
+  if( like.src.indexOf("active") >= 0 ) {
+    like.src = './images/coracao.svg';
+  } else {
+    like.src = './images/like_icon_active.svg';
   }
 }
-
-
-
-
 
 const fecharGallery = document.getElementById("fecharGallery2");
 const popupGallery = document.querySelector(".popup__gallery");

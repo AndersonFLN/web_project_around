@@ -27,12 +27,11 @@ dialog {
 }
 
 .popup__gallery{
-  width: 816px;
-  height: 540px;
   padding: 0;
+  background-color: transparent;
 }
 
-.img_espandido{
+.img_preview{
   width: 816px;
   height: 540px;
 }
@@ -53,7 +52,7 @@ dialog {
     padding: 0;
   }
 
-  .img_espandido{
+  .img_preview{
     width: 100%;
     height: 500px;
   }
@@ -67,7 +66,7 @@ dialog {
     padding: 0;
   }
 
-  .img_espandido{
+  .img_preview{
     width: 100%;
     height: 500px;
   }
@@ -81,7 +80,7 @@ dialog {
     padding: 0;
   }
 
-  .img_espandido{
+  .img_preview{
     width: 100%;
     height: 500px;
   }
@@ -101,7 +100,7 @@ dialog {
     padding: 0;
   }
 
-  .img_espandido{
+  .img_preview{
     width: 100%;
     height: 335px;
   }

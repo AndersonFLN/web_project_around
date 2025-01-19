@@ -20,6 +20,7 @@
             <h2 class="popup__title">Editar Perfil</h2>
             <form class="popup__form">
               <input
+                required
                 type="text"
                 class="input input_popup-name"
                 id="input_popup-name"
@@ -27,6 +28,7 @@
                 name="name"
               />
               <input
+                required
                 type="text"
                 class="input input_popup-job"
                 id="input_popup-job"
@@ -48,6 +50,7 @@
             <h2 class="popup__title">Novo local</h2>
             <form class="popup__form-gallery">
               <input
+                required
                 type="text"
                 class="input input_popup-title"
                 id="input_popup-title"
@@ -55,7 +58,8 @@
                 name="title"
               />
               <input
-                type="text"
+                required
+                type="url"
                 class="input input_popup-link"
                 id="input_popup-link"
                 placeholder="URL da imagem"
@@ -70,13 +74,26 @@
         </div>
       </div>
 
+      <template id="card-template">
+        <div class="card">
+          <img src="{{link}}" class="card__img" alt="cover" onclick="showImage('{{link}}', '{{name}}')">
+          <div class="card__label">
+            <p class="block">{{name}}</p>
+            <div class="button button_like">
+              <img src="./images/trash-icon.svg"  onclick="onDeleteCard(this, '{{name}}');" class="trash" alt="delete" title="apagar"/>
+              <img src="./images/coracao.svg" onclick="onLikeCard(this)" class="like" alt="like"/>
+            </div>
+          </div>
+        </div>
+      </template>
+
       <!-- Abrir foto da galeria-->
 
       <div class="popup popup_photo-gallery">
         <div class="popup__container">
           <dialog class="popup__gallery">
             <div class="img-detail">
-              <img id="popupImage" src="" class="img_espandido" alt="imagem ampliada">
+              <img id="popupImage" src="" class="img_preview" alt="imagem ampliada">
               <div id="popupText">Novo local</div>
             </div>
             <div class="popup__container">
