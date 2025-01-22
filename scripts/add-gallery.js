@@ -1,5 +1,5 @@
 const buttonAdd = document.querySelector("#profile__card");
-const modaladd = document.querySelector(".dialog_gallery");
+const modalAdd = document.querySelector(".dialog_gallery");
 const buttonFecharModalAdd = document.querySelector("#fecharGallery");
 const galleryContainer = document.getElementById("elements");
 const criarGallery = document.querySelector(".popup__form-gallery");
@@ -33,32 +33,51 @@ const initialCards = [
 
 buttonAdd.onclick = function(){
 
-  modaladd.showModal();
+  modalAdd.showModal();
 }
 
 buttonFecharModalAdd.onclick = function(){
 
-  modaladd.close();
+  modalAdd.close();
 
 }
 
 function renderCard(name, link) {
   // Obtém o template do HTML
-  const template = document.getElementById("card-template").innerHTML;
+  const cardTemplate  = document.querySelector("#card-template").content;
 
-  // Substitui os placeholders pelas variáveis fornecidas
-  const cardHTML = template
-    .replaceAll("{{link}}", link)
-    .replaceAll("{{name}}", name);
+  const cardElement = cardTemplate.cloneNode(true);
 
-  return cardHTML;
+  const imageElement = cardElement.querySelector(".card__img");
+  imageElement.src = link;
+  imageElement.alt = name;
+
+  const nameElement = cardElement.querySelector(".block");
+  nameElement.innerHTML = name;
+
+  const trashButton = cardElement.querySelector(".trash");
+  trashButton.addEventListener("click", function() {
+    onDeleteCard(this, name);
+  });
+
+  const likeButton = cardElement.querySelector(".card__img");
+  likeButton.addEventListener("click", function() {
+    showImage(link, name);
+  });
+
+  const imageFull = cardElement.querySelector(".like");
+  imageFull.addEventListener("click", function() {
+    onLikeCard(this);
+  });
+
+  return cardElement;
 }
 
 function initializeCards(){
   let pos = 0;
   for(let item of initialCards ){
     const galtml = renderCard(item.name, item.link, pos++);
-    galleryContainer.insertAdjacentHTML('afterbegin', galtml);
+    galleryContainer.append(galtml);
   }
 }
 

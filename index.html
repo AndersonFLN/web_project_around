@@ -76,12 +76,12 @@
 
       <template id="card-template">
         <div class="card">
-          <img src="{{link}}" class="card__img" alt="cover" onclick="showImage('{{link}}', '{{name}}')">
+          <img src="" class="card__img" alt="cover">
           <div class="card__label">
-            <p class="block">{{name}}</p>
+            <p class="block"></p>
             <div class="button button_like">
-              <img src="./images/trash-icon.svg"  onclick="onDeleteCard(this, '{{name}}');" class="trash" alt="delete" title="apagar"/>
-              <img src="./images/coracao.svg" onclick="onLikeCard(this)" class="like" alt="like"/>
+              <img src="./images/trash-icon.svg" class="trash" alt="delete" title="apagar"/>
+              <img src="./images/coracao.svg" class="like" alt="like"/>
             </div>
           </div>
         </div>
