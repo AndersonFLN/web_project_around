@@ -35,7 +35,7 @@ dialog {
 .img_preview{
   max-width: 75vw;
   max-height: 75vh;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .card__img {
@@ -45,4 +45,10 @@ dialog {
   transform:scale(1.02);
   transition:all 0.2s;
   overflow: hidden;
+}
+
+@media (max-width: 950px) {
+  .img_preview {
+    height: auto;
+  }
 }

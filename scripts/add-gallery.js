@@ -1,6 +1,6 @@
 const buttonAdd = document.querySelector("#profile__card");
 const modalAdd = document.querySelector(".dialog_gallery");
-const buttonFecharModalAdd = document.querySelector("#fecharGallery");
+const buttonCloseModalAdd = document.querySelector("#closeGallery");
 const galleryContainer = document.getElementById("elements");
 const criarGallery = document.querySelector(".popup__form-gallery");
 
@@ -36,7 +36,7 @@ buttonAdd.onclick = function(){
   modalAdd.showModal();
 }
 
-buttonFecharModalAdd.onclick = function(){
+buttonCloseModalAdd.onclick = function(){
 
   modalAdd.close();
 
@@ -97,7 +97,7 @@ criarGallery.addEventListener('submit', (evt) => {
   galleryContainer.textContent = "";
   initializeCards();
 
-  modaladd.close();
+  modalAdd.close();
 });
 
 
@@ -117,11 +117,11 @@ function onLikeCard(like){
   }
 }
 
-const fecharGallery = document.getElementById("fecharGallery2");
+const closeGallery = document.getElementById("closeGallery2");
 const popupGallery = document.querySelector(".popup__gallery");
 
 
-fecharGallery.onclick = function(){
+closeGallery.onclick = function(){
   popupGallery.close();
 }
 
