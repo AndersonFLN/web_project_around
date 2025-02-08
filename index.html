@@ -18,24 +18,26 @@
         <div class="popup__container">
           <dialog class="dialog">
             <h2 class="popup__title">Editar Perfil</h2>
-            <form class="popup__form">
+            <form class="popup__form" >
               <input
-                required
                 type="text"
-                class="input input_popup-name"
+                class="input input_popup-name popup__input"
                 id="input_popup-name"
                 placeholder="Nome"
                 name="name"
+                required minlength="2" maxlength="40"
               />
+              <p class="form__error" ></p>
               <input
-                required
                 type="text"
-                class="input input_popup-job"
+                class="input input_popup-job popup__input"
                 id="input_popup-job"
                 placeholder="Sobre mim"
                 name="job"
+                required minlength="2" maxlength="200"
               />
-              <button type="submit" class="button button_popup-submit">
+              <p class="form__error" ></p>
+              <button type="submit" class="button button_popup-submit" disabled>
                 Salvar
               </button>
             </form>
@@ -50,22 +52,24 @@
             <h2 class="popup__title">Novo local</h2>
             <form class="popup__form-gallery">
               <input
-                required
+                required minlength="2" maxlength="30"
                 type="text"
-                class="input input_popup-title"
+                class="input input_popup-title popup__input"
                 id="input_popup-title"
                 placeholder="Titulo"
                 name="title"
               />
+              <p class="form__error" ></p>
               <input
                 required
                 type="url"
-                class="input input_popup-link"
+                class="input input_popup-link popup__input"
                 id="input_popup-link"
                 placeholder="URL da imagem"
                 name="link"
               />
-              <button type="submit" class="button button_popup-submit" >
+              <p class="form__error" ></p>
+              <button type="submit" class="button button_popup-submit" disabled>
                 Criar
               </button>
             </form>
@@ -138,8 +142,12 @@
       <footer class="footer">
         <p>&#169; © 2024 Around The U.S.</p>
       </footer>
+
       <script src="./scripts/index.js"></script>
       <script src="./scripts/add-gallery.js"></script>
+      <script src="./scripts/validate.js"></script>
+
+
 
     </div>
   </body>

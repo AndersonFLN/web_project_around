@@ -56,6 +56,12 @@ function handleProfileFormSubmit(evt) {
 // ele vai observar o evento de submit
 formElement.addEventListener('submit', handleProfileFormSubmit);
 
+modal.addEventListener('click', function (evt) {
+  if( evt.offsetX < 0 || evt.offsetX > modal.clientWidth || evt.offsetY < 0 || evt.offsetY > modal.clientHeight ) {
+    modal.close();
+  }
+});
+
 
 
 
