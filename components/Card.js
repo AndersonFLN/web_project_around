@@ -1,4 +1,4 @@
-import { popupGallery } from "./utils.js";
+import { PopupWithImage } from "./PopupWithImage.js";
 
 export class Card {
 
@@ -25,13 +25,13 @@ export class Card {
       me.onDeleteCard(trashButton);
     });
 
-    const likeButton = cardElement.querySelector(".card__img");
-    likeButton.addEventListener("click", function() {
+    const imageFull = cardElement.querySelector(".card__img");
+    imageFull.addEventListener("click", function() {
       me.showImage();
     });
 
-    const imageFull = cardElement.querySelector(".like");
-    imageFull.addEventListener("click", function() {
+    const likeButton = cardElement.querySelector(".like");
+    likeButton.addEventListener("click", function() {
       me.onLikeCard(this);
     });
 
@@ -41,9 +41,6 @@ export class Card {
   onDeleteCard(trash) {
     const cardToRemove = trash.closest('.card');
     cardToRemove.remove();
-
-    const index = initialCards.findIndex(item => item.name === this._name);
-    initialCards.splice(index, 1);
   }
 
   onLikeCard(like){
@@ -55,10 +52,8 @@ export class Card {
   }
 
   showImage() {
-    popupGallery.showModal();
-
-    document.getElementById("popupImage").src = this._image_url;
-    document.getElementById("popupText").innerHTML = this._name;
-
+    const popup = new PopupWithImage(".popup__gallery");
+    popup.setEventListeners("");
+    popup.open(this._name, this._image_url);
   }
 }
