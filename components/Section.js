@@ -20,7 +20,7 @@ export class Section {
     this._config.items.push( item );
     const card = new Card (item.name, item.link);
     const galtml = card.render();
-    this._galleryContainer.append(galtml);
+    this._galleryContainer.prepend(galtml);
   }
 
 }
